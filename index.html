@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus objetivos do ano</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+<style>
+    .menu-acessibilidade {
+    position: absolute;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+}
+
+.apresenta-lista {
+    display: none;
+}
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste #tropicalia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste .fundo-galeria {
+    background: none;
+     }
+  
+</style>
+
+
+
+<body>
+
+
+
+
+
+    <div id="acessibilidade" class="menu-acessibilidade">
+        <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">
+          acessibilidade
+      
+        </button>
+      
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+            <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
+            <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
+            <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores">
+                <i class="fas fa-adjust"></i>
+            </button>        <button id="audio-botao"> 🔊  </button>
+      
+        </div>
+      </div>
+      </nav>
+       </header>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="conteudo-principal">
+        <h2 style="color: rgb(203, 215, 226);" class="titulo-principal">Meus objetivos do ano<span></span></h2>
+        
+        <div class="conteudo">
+            <div class="botoes">
+                <button class="botao ativo">Escola</button>
+                <button class="botao">Realizar o vestibular</button>
+                <button class="botao">Aniversario da mimha mãe</button>
+                <button class="botao">tempo que usarei para estudar redação e matematica</button>
+            </div>
+            <div class="abas-textos">
+                <div class="aba-conteudo ativo">
+                    <h3 class="aba-conteudo-titulo-principal">Finalizar finalmente o ensino medio </h3>
+                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                    <div class="contador">
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="dias0"></p>
+                            <p class="contador-digito-texto">dias</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="horas0"></p>
+                            <p class="contador-digito-texto">horas</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="min0"></p>
+                            <p class="contador-digito-texto">min</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="seg0"></p>
+                            <p class="contador-digito-texto">seg</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aba-conteudo">
+                    <h3 class="aba-conteudo-titulo-principal">Realizar o Enem e a prova da federal</h3>
+                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                    <div class="contador">
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="dias1"></p>
+                            <p class="contador-digito-texto">dias</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="horas1"></p>
+                            <p class="contador-digito-texto">horas</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="min1"></p>
+                            <p class="contador-digito-texto">min</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="seg1"></p>
+                            <p class="contador-digito-texto">seg</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aba-conteudo">
+                    <h3 class="aba-conteudo-titulo-principal"> após 2 anos vivendo longe poderei passar o Aniversario dela ao lado dela(o meu n sera possivel afinal pelo fato de ja ter passado)</h3>
+                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                    <div class="contador">
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="dias2"></p>
+                            <p class="contador-digito-texto">dias</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="horas2"></p>
+                            <p class="contador-digito-texto">horas</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="min2"></p>
+                            <p class="contador-digito-texto">min</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="seg2"></p>
+                            <p class="contador-digito-texto">seg</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aba-conteudo">
+                    <h3 class="aba-conteudo-titulo-principal">Atualizar meu curriculo com os certificados da Alura</h3>
+                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                    <div class="contador">
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="dias3"></p>
+                            <p class="contador-digito-texto">dias</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="horas3"></p>
+                            <p class="contador-digito-texto">horas</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="min3"></p>
+                            <p class="contador-digito-texto">min</p>
+                        </div>
+                        <div class="contador-digito">
+                            <p class="contador-digito-numero" id="seg3"></p>
+                            <p  class="contador-digito-texto">seg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

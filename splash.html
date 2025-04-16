@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> xandylindo  </title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #081f3d; 
+}
+
+header {
+    background-color: #3f4d3d; 
+    color: #f2ebc9; 
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #272727; 
+    border-radius: 10px 10px 0 0; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #f2ebc9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #46443f; 
+}
+
+.menu-acessibilidade {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.menu-acessibilidade button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #496a2b;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu-acessibilidade button:hover {
+    background-color: #618c3d;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #FFAE00; 
+}
+
+
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#galeria img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #2e5129;
+    transition: transform 0.3s;
+}
+
+#galeria img:hover {
+    transform: scale(1.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #FFAE00; 
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #618c3d;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #2e5129;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #618c3d;
+}
+
+footer {
+    background-color: #52814c;
+    color: #f2ebc9;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #FFAE00; 
+    border-radius: 0 0 10px 10px; 
+}
+
+
+.high-contrast {
+    background-color: #000000; 
+    color: #ff2600; 
+}
+
+.high-contrast header,
+.high-contrast footer {
+    background-color: #222222; 
+    color: #FFFF00;
+}
+
+.high-contrast nav ul li a {
+    color: #FFAE00; /
+}
+
+.high-contrast .menu-acessibilidade button,
+.high-contrast form button {
+    background-color: #FFAE00;
+    color: black;
+    border: 2px solid #FFFF00; 
+}
+
+.high-contrast form input,
+.high-contrast form textarea {
+    background-color: #222222;
+    color: #FFFF00; 
+    border: 2px solid #FFAE00; 
+}
+
+.high-contrast #galeria img {
+    border: 3px solid #e23119; 
+}
+
+.high-contrast nav ul li a:hover {
+    color: #FF0000; 
+}
+
+.high-contrast .menu-acessibilidade button:hover {
+    background-color: #FF0000; 
+}
+
+
+
+
+
+
+
+.menu-acessibilidade {
+    position: absolute;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+}
+
+.apresenta-lista {
+    display: none;
+}
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste #tropicalia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste .fundo-galeria {
+    background: none;
+     }
+  
+</style>
+
+
+
+
+
+
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">inicio </a></li>
+                <li><a href="#galeria">meio </a></li>
+                <li><a href="#contato">contato </a> </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+    <main>
+        <section id="inicio">
+            <h1 style="color: white;">Hello world </h1>
+            <p style="color: azure;"> Está sera uma pagina dedicada a falar sobre os objetivos do astro da computação, o homem que superou Mark Zuckerberg
+e diversos genios ao longo do caminho,o estudante  <strong style="color: #000000;">Alexandre </strong> ,no ano de 2025, ano que sera extremamente corrido e ocupado, diversos trabalhos escolares  ao mesmo tempo sem contar as ocupações pessoais e ter que estudar por fora para mais entendimentos e preparações para a vida adulta, esse projeto poderia haver mais detalhes sobre as ambições desse homem, no entanto como esta em um ano onde precisa gastar seu tempo em estudos para garantir seu futuro seus planos para esse ano são extremamente limitados,acompanhe o seus planos na proxima pagina.         </section>
+        
+       
+       
+        <section id="contato">
+            <h1 style="color: white">ir para proxima pagina </h1>
+        <p style="color: white;">se deseja prosseguir <a href="index.html"> Clique aqui </a> e sera direcionado </p>
+           
+
+
+
+
+
+          
+    <section id="contato">
+      <h2 style="color:white;">  contato  </h2>
+
+
+   <div>
+    <a href="https://github.com/xandydrv" target="">
+        <i class="fab fa-github"></i> 
+    </a>
+    <a href="https://instagram.com/santtosxr7" target="">
+        <i class="fab fa-instagram"></i> 
+    </a>
+</div>
+</footer>
+
+
+
+
+
+
+
+      </section>
+
+          </section>
+    </main>
+   
+
+
+    <footer style="color: #2e5129;">
+        <p style="color: white;"> Xandy</p>
+    </footer>
+    
+    <script>
+        function increaseFontSize() {
+            document.body.style.fontSize = (parseFloat(getComputedStyle(document.body).fontSize) + 2) + 'px';
+        }
+        function decreaseFontSize() {
+            document.body.style.fontSize = (parseFloat(getComputedStyle(document.body).fontSize) - 2) + 'px';
+        }
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
+</body>
+<script src="script.js"></script>
+
+</html>
